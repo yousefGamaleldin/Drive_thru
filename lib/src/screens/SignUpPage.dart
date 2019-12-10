@@ -69,7 +69,7 @@ class _SignUpPageState extends State<SignUpPage> {
                     cursorColor: primaryColor,
                     style: inputFieldTextStyle,
                     decoration: InputDecoration(
-                        hintText: 'Full Name',
+                        hintText: 'First Name & Last Name',
                         hintStyle: inputFieldHintTextStyle,
                         focusedBorder: inputFieldFocusedBorderStyle,
                         contentPadding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
