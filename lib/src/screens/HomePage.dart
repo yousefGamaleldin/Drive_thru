@@ -1,3 +1,4 @@
+import 'package:drive_thru/src/screens/ResturantList.dart';
 import 'package:flutter/material.dart';
 import '../shared/styles.dart';
 import '../shared/colors.dart';
@@ -25,7 +26,7 @@ class _HomePageState extends State<HomePage> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
-          Image.asset('images/welcome.png', width: 190, height: 190),
+          Image.asset('images/welcome.png', width: MediaQuery.of(context).size.width * 0.35, height: MediaQuery.of(context).size.height * 0.35 ),
           Container(
             margin: EdgeInsets.only(bottom: 10, top: 0),
             child: Text('Virtual Drive-Thru!', style: logoStyle),
@@ -35,14 +36,14 @@ class _HomePageState extends State<HomePage> {
             margin: EdgeInsets.only(bottom: 0),
             child: froyoFlatBtn('Sign In', (){ 
 
-              Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.rotate, duration: Duration(seconds: 1),  child: SignInPage()));
+              Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.rotate, duration: Duration(seconds: 1),  child: ResturantList()));
             }),
           ),
           Container(
             width: 200,
             padding: EdgeInsets.all(0),
             child: froyoOutlineBtn('Sign Up', (){
-              Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.rotate, duration: Duration(seconds: 1),  child: SignUpPage()));
+              Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.rotate, duration: Duration(seconds: 1),  child: ResturantList()));
               // Navigator.of(context).pushReplacementNamed('/signup');
              }),
           ),
