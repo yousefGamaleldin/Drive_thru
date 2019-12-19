@@ -114,3 +114,26 @@ const inputFieldFalseBorderStyle = OutlineInputBorder(
 
 const inputFieldDefaultBorderStyle = OutlineInputBorder(
     gapPadding: 0, borderRadius: BorderRadius.all(Radius.circular(6)));
+
+const rescardstyle = BoxDecoration(
+    color: white,
+    boxShadow: [
+      BoxShadow(
+          color: Color.fromRGBO(0, 0, 0, .1),
+          blurRadius: 10,
+          spreadRadius: 5,
+          offset: Offset(0, 1))
+    ],
+    borderRadius: BorderRadiusDirectional.only(
+        bottomEnd: Radius.circular(20),topEnd:Radius.circular( 20),topStart: Radius.circular(10),bottomStart: Radius.circular(10), ));
+const brescardstyle = BoxDecoration(
+    color: Colors.green,
+    boxShadow: [
+      BoxShadow(
+          color: Color.fromRGBO(0, 0, 0, .1),
+          blurRadius: 10,
+          spreadRadius: 5,
+          offset: Offset(0, 1))
+    ],
+    borderRadius: BorderRadiusDirectional.only(
+        bottomStart: Radius.circular(20),topStart:Radius.circular( 20) ));

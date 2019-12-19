@@ -3,6 +3,90 @@ import '../shared/Product.dart';
 import '../shared/colors.dart';
 import '../shared/styles.dart';
 
+
+
+
+
+
+
+Widget resitem(Product food,
+    {double imgWidth, onLike, onTapped, bool isProductPage = false}){
+ 
+  return 
+  Container(
+    // width: MediaQuery.of().size.width * 0.65,
+
+    // height: 180,
+    // color: Colors.red,
+    margin: EdgeInsets.all(3),
+    child: 
+  
+    Stack(
+      children: <Widget>[
+        Container(
+          //  width: double.infinity,
+          height: 190,
+          width:500,
+          padding: EdgeInsets.all(9),
+          
+            child:
+             RaisedButton(
+            
+            color: white,
+            elevation: (isProductPage) ? 20 : 12,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+            onPressed: onTapped,
+            child: Hero(
+              transitionOnUserGestures: true,
+              tag: food.name,
+             
+              child: Image.asset(food.image,
+                  width: (imgWidth != null) ? imgWidth : 100),
+                  
+            ),
+          ),
+        ),
+        
+        Positioned( // for like button 
+          
+          bottom: (isProductPage) ? 10 : 70,
+          right: 0,
+          child: FlatButton(
+            padding: EdgeInsets.all(20),
+            shape: CircleBorder(),
+            onPressed: onLike,
+            child: Icon(
+              (food.userLiked) ? Icons.favorite : Icons.favorite_border,
+              color: (food.userLiked) ? primaryColor : darkText,
+              size: 30,
+            ),
+          ),
+        ),
+        Positioned( // for text in the menu card 
+          bottom: 10,
+          left:10,
+          child: (!isProductPage)
+              ? Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(food.name, style: foodNameText),
+                   
+                  ],
+                )
+              : Text(' '),
+        ),
+      
+      ],
+    ),
+  );
+}
+
+
+
+
+
 Widget foodItem(Product food,
     {double imgWidth, onLike, onTapped, bool isProductPage = false}) {
 

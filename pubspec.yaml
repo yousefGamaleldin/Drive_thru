@@ -68,10 +68,11 @@ flutter:
    - images/9.png
    - images/rest.jpg
    - images/logopng.png
-
-
-
-
+   - images/k.png
+   - images/ph.png
+   - images/pj.png
+   - images/m.png
+   - images/bk.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -1,3 +1,4 @@
+import 'package:drive_thru/src/screens/menu.dart';
 import 'package:drive_thru/src/shared/Loading.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -91,7 +92,7 @@ class _SignInPageState extends State<SignInPage> {
                         email: _email,
                         password: _password
                       ).then((user){
-                       Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.rightToLeft, child: ResturantList()));
+                       Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.rightToLeft, child: Menu()));
                       }).catchError((e) {
                         setState((){
                           loading = false;
@@ -140,7 +141,7 @@ class _SignInPageState extends State<SignInPage> {
                       email: _email,
                       password: _password
                     ).then((user){
-                      Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.rightToLeft, child: ResturantList()));
+                      Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.rightToLeft, child: Menu()));
                     }).catchError((e) {
                       setState((){
                         loading = false;
