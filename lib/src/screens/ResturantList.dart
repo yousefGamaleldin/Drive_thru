@@ -47,20 +47,8 @@ class _ResturantListState extends State<ResturantList> {
           ),
           backgroundColor: primaryColor,
           title:
-              Text('Virtual Drive-Thru', style: logoWhiteStyle, textAlign: TextAlign.center),
+              Text('Virtual DriveThru', style: logoWhiteStyle, textAlign: TextAlign.center),
           actions: <Widget>[
-            IconButton(
-              padding: EdgeInsets.all(0),
-              onPressed: () {},
-              iconSize: 21,
-              icon: Icon(Fryo.magnifier),
-            ),
-            IconButton(
-              padding: EdgeInsets.all(0),
-              onPressed: () {},
-              iconSize: 21,
-              icon: Icon(Fryo.alarm),
-            ),
             FlatButton(
                 onPressed: () {
                     FirebaseAuth.instance.signOut().then((value){

@@ -36,14 +36,14 @@ class _HomePageState extends State<HomePage> {
             margin: EdgeInsets.only(bottom: 0),
             child: froyoFlatBtn('Sign In', (){ 
 
-              Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.rotate, duration: Duration(seconds: 1),  child: ResturantList()));
+              Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.rotate, duration: Duration(seconds: 1),  child: SignInPage()));
             }),
           ),
           Container(
             width: 200,
             padding: EdgeInsets.all(0),
             child: froyoOutlineBtn('Sign Up', (){
-              Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.rotate, duration: Duration(seconds: 1),  child: ResturantList()));
+              Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.rotate, duration: Duration(seconds: 1),  child: SignUpPage()));
               // Navigator.of(context).pushReplacementNamed('/signup');
              }),
           ),

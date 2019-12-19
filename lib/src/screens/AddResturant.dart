@@ -1,3 +1,4 @@
+import 'package:drive_thru/src/screens/ResturantList.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -42,6 +43,9 @@ class _AddResturantState extends State<AddResturant>
           centerTitle: true,
           leading: BackButton(
             color: darkText,
+            onPressed: (){
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){return new ResturantList(); }));
+            },
           ),
           title: Text("Add a Resturant", style: h4),
         ),

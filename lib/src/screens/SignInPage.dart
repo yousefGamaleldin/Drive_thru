@@ -1,3 +1,4 @@
+import 'package:drive_thru/src/shared/Loading.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import '../shared/styles.dart';
@@ -18,12 +19,18 @@ class SignInPage extends StatefulWidget {
 }
 
 class _SignInPageState extends State<SignInPage> {
+  bool loading = false;
   String _email;
   String _password;
+  
+  Widget okButton = FlatButton(
+  child: Text("OK"),
+  onPressed: () { },
+  );
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return loading ? Loading() : Scaffold(
       appBar: AppBar(
         elevation: 0,
         backgroundColor: white,
@@ -77,6 +84,35 @@ class _SignInPageState extends State<SignInPage> {
                     onChanged: (value){
                       _password = value;
                     },
+                    onSubmitted: (value){
+                      _password = value;
+                      setState( () {loading = true;});
+                      FirebaseAuth.instance.signInWithEmailAndPassword(
+                        email: _email,
+                        password: _password
+                      ).then((user){
+                       Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.rightToLeft, child: ResturantList()));
+                      }).catchError((e) {
+                        setState((){
+                          loading = false;
+                        });
+                        print(e);
+                        // AlertDialog alert = AlertDialog(
+                        //   title: Text("ERROR"),
+                        //   content: Text("$e"),
+                        //   actions: [
+                        //     okButton,
+                        //   ],
+                        // );
+                      
+                        // showDialog(
+                        //   context: context,
+                        //   builder: (BuildContext context) {
+                        //     return alert;
+                        //   },
+                        // );
+                      });
+                    },
                     obscureText: true,
                     cursorColor: primaryColor,
                     style: inputFieldHintPaswordTextStyle,
@@ -99,13 +135,34 @@ class _SignInPageState extends State<SignInPage> {
               right: -15,
               child: FlatButton(
                 onPressed: () {
+                    setState( () {loading = true;});
                     FirebaseAuth.instance.signInWithEmailAndPassword(
                       email: _email,
                       password: _password
                     ).then((user){
                       Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.rightToLeft, child: ResturantList()));
-                    }).catchError((e){print(e);});
-                  },
+                    }).catchError((e) {
+                      setState((){
+                        loading = false;
+                      });
+                      print(e);
+                      AlertDialog alert = AlertDialog(
+                        title: Text("ERROR"),
+                        content: Text("$e"),
+                        actions: [
+                          okButton,
+                        ],
+                      );
+                      
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return alert;
+                        },
+                      );
+
+                    });
+                },
                 color: primaryColor,
                 padding: EdgeInsets.all(13),
                shape: CircleBorder(),

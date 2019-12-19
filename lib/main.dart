@@ -14,9 +14,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Fryo',
+      title: 'Virtual DriveThru',
       theme: ThemeData(
-        primarySwatch: Colors.green,
+        primarySwatch: Colors.orange,
       ),
       home: HomePage(pageTitle: 'Welcome'),
       routes: <String, WidgetBuilder> {

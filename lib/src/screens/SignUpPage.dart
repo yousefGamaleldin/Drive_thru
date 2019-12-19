@@ -58,7 +58,7 @@ class _SignUpPageState extends State<SignUpPage> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text('Welcome to The Virtual Drive-ThruS!', style: h3),
+                Text('Welcome to The Virtual DriveThru!', style: h3),
                 Text('Let\'s get started', style: taglineText),
                 Container(
                   margin: EdgeInsets.only(top: 13),

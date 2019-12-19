@@ -13,7 +13,7 @@ const logoStyle = TextStyle(
 
 const logoWhiteStyle = TextStyle(
     fontFamily: 'Pacifico',
-    fontSize: 21,
+    fontSize: 19,
     letterSpacing: 2,
     color: Colors.white);
 const whiteText = TextStyle(color: Colors.white, fontFamily: 'Poppins');
