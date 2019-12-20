@@ -8,6 +8,93 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:842954118148:android:c5c443963ce99a781d1151",
+        "android_client_info": {
+          "package_name": "com.SE.planting_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842954118148-lqvhoae74cfsup04vad3h1djiapgadj0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCVeWirXHqa0cGj1D8xDc30Xpy1n2HGpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842954118148-lqvhoae74cfsup04vad3h1djiapgadj0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842954118148:android:0944d4bb212458b21d1151",
+        "android_client_info": {
+          "package_name": "com.caiwave.DriveThru"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842954118148-lqvhoae74cfsup04vad3h1djiapgadj0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCVeWirXHqa0cGj1D8xDc30Xpy1n2HGpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842954118148-lqvhoae74cfsup04vad3h1djiapgadj0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842954118148:android:c70df61f2fdfc6751d1151",
+        "android_client_info": {
+          "package_name": "com.caiwave.drivethru"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842954118148-lqvhoae74cfsup04vad3h1djiapgadj0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCVeWirXHqa0cGj1D8xDc30Xpy1n2HGpY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842954118148-lqvhoae74cfsup04vad3h1djiapgadj0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:842954118148:android:155a951433eff6c91d1151",
         "android_client_info": {
           "package_name": "com.example.drive_thru"
