@@ -1,4 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:drive_thru/src/screens/ResturantList.dart';
+import 'package:drive_thru/src/screens/menu.dart';
 import 'package:flutter/material.dart';
+import 'package:page_transition/page_transition.dart';
 import '../shared/Product.dart';
 import '../shared/styles.dart';
 import '../shared/colors.dart';
@@ -116,7 +120,16 @@ class _ProductPageState extends State<ProductPage> {
                           ),
                           Container(
                             width: 180,
-                            child: froyoOutlineBtn('Buy Now', () {}),
+                            child: froyoOutlineBtn('Buy Now', () {
+                              Firestore.instance.collection('/Orders').add({
+                                'Item Name' : widget.productData.name,
+                                'Item Price' : widget.productData.price,
+                                'Units' : _quantity 
+                              }).then((value){
+                                //Navigator.of(context).pop();
+                                Navigator.pushReplacement(context, PageTransition(type: PageTransitionType.leftToRight, child: Menu()));
+                              }).catchError((e){print(e);});
+                            }),
                           ),
                           Container(
                             width: 180,
