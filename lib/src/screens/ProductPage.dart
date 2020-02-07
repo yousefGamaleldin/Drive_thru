@@ -11,7 +11,6 @@ import 'package:drive_thru/src/screens/AddResturant.dart';
 import 'package:drive_thru/src/screens/HomePage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'Timerpage.dart';
-import 'Dashboard.dart';
 
 class ProductPage extends StatefulWidget {
   final String pageTitle;
